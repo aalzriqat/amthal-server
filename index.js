@@ -6,7 +6,10 @@ app.use((req,res,next) => {
 res.header("Access-Control-Allow-Origin","*");
 next();
 });
-
+app.get("/", (req, res) => {
+    res.send("Server is working correctly");
+  });
+ 
 app.get("/amthal/random",(req,res) =>{
     res.json(randomMathal());
 });
